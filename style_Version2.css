@@ -1,0 +1,149 @@
+/* --- Additions for file dropdown, viewport-editor and Tutorials panel --- */
+
+/* File menu dropdown */
+.menu-item.dropdown {
+    position: relative;
+}
+.menu-item.dropdown .menu-dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 28px;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    padding: 6px 4px;
+    border-radius: 4px;
+    min-width: 120px;
+    z-index: 50;
+}
+.menu-item.dropdown.open .menu-dropdown {
+    display: block;
+}
+.menu-dropdown-item {
+    padding: 6px 10px;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-size: 12px;
+    border-radius: 3px;
+}
+.menu-dropdown-item:hover { background: var(--bg-hover); }
+
+/* Viewport editor overlay */
+.viewport-editor-overlay {
+    position: absolute;
+    inset: 44px 8px 8px 8px;
+    background: rgba(22,22,22,0.95);
+    color: var(--text-primary);
+    border-radius: 6px;
+    display: none;
+    flex-direction: column;
+    z-index: 40;
+    border: 1px solid var(--border-color);
+    padding: 8px;
+}
+.viewport-editor-overlay[aria-hidden="false"] { display: flex; }
+.editor-toolbar {
+    display:flex;
+    gap:8px;
+    align-items:center;
+    margin-bottom:6px;
+}
+.editor-toolbar input#tutorial-search {
+    flex:1;
+    padding:6px 8px;
+    background:var(--bg-input);
+    border:1px solid var(--border-color);
+    color:var(--text-primary);
+    border-radius:4px;
+}
+.editor-area {
+    flex:1;
+    overflow:auto;
+    padding:8px;
+    background: rgba(0,0,0,0.12);
+    border-radius:4px;
+    min-height:140px;
+}
+.editor-area:focus {
+    outline:2px solid var(--accent-blue);
+}
+.editor-footer {
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    margin-top:6px;
+    font-size:12px;
+    color:var(--text-secondary);
+}
+
+/* Tutorials list */
+.tutorials .tutorial-modes .mode-item {
+    border:1px solid var(--border-color);
+    border-radius:4px;
+    margin-bottom:6px;
+    overflow:hidden;
+}
+.mode-header {
+    display:flex;
+    gap:8px;
+    padding:6px 8px;
+    background:var(--bg-toolbar);
+    cursor:pointer;
+    align-items:center;
+}
+.mode-body {
+    display:none;
+    padding:6px 8px;
+    background:var(--bg-darker);
+}
+.mode-item.foldable.active .mode-body { display:block; }
+.mode-section {
+    padding:4px 6px;
+    font-size:12px;
+    color:var(--text-secondary);
+}
+
+/* Tutorial items */
+#tutorials-list {
+    margin-top:8px;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+.tutorial-entry {
+    padding:8px;
+    background:var(--bg-panel);
+    border-radius:4px;
+    border:1px solid var(--border-color);
+}
+.tutorial-entry .entry-meta {
+    display:flex;
+    gap:8px;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:6px;
+    font-size:12px;
+    color:var(--text-secondary);
+}
+.tutorial-entry .entry-body {
+    font-size:13px;
+    color:var(--text-primary);
+}
+
+/* small button styles */
+button.primary {
+    background:var(--accent-blue);
+    color:#fff;
+    border:none;
+    padding:6px 8px;
+    border-radius:4px;
+    cursor:pointer;
+}
+.n-btn {
+    padding:6px 10px;
+    background:var(--bg-toolbar);
+    border:1px solid var(--border-color);
+    color:var(--text-primary);
+    border-radius:4px;
+    cursor:pointer;
+}

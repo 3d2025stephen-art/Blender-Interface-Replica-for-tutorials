@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blender 4.5.3 LTS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Title Bar -->
+        <div class="title-bar">
+            <div class="title-left">
+                <span class="unsaved">*</span>
+                <span class="title-text">(Unsaved) - Blender 4.5.3 LTS</span>
+            </div>
+            <div class="title-right">
+                <span class="stat">IPS: N/A</span>
+                <span class="stat">graphique</span>
+                <span class="stat">0%</span>
+                <span class="stat">Processeur: 4%</span>
+                <span class="stat">LAT: N/A</span>
+                <button class="window-btn">_</button>
+                <button class="window-btn">□</button>
+                <button class="window-btn close">×</button>
+            </div>
+        </div>
+
+        <!-- Menu Bar -->
+        <div class="menu-bar">
+            <div class="menu-left">
+                <div class="menu-item logo">
+                    <i data-lucide="box" style="width:16px;height:16px;"></i>
+                </div>
+                <div class="menu-item">File</div>
+                <div class="menu-item">Edit</div>
+                <div class="menu-item">Render</div>
+                <div class="menu-item">Window</div>
+                <div class="menu-item">Help</div>
+            </div>
+            <div class="workspace-tabs">
+                <div class="tab">Layout</div>
+                <div class="tab active">Modeling</div>
+                <div class="tab">Sculpting</div>
+                <div class="tab">UV Editing</div>
+                <div class="tab">Texture Paint</div>
+                <div class="tab">Shading</div>
+                <div class="tab">Animation</div>
+                <div class="tab">Rendering</div>
+                <div class="tab">Compositing</div>
+                <div class="tab">Geometry Nodes</div>
+                <div class="tab">Scripting</div>
+                <div class="tab add">+</div>
+            </div>
+            <div class="menu-right">
+                <div class="scene-selector">
+                    <i data-lucide="settings" style="width:14px;height:14px;"></i>
+                    <span>Scene</span>
+                </div>
+                <div class="viewlayer-selector">
+                    <i data-lucide="layers" style="width:14px;height:14px;"></i>
+                    <span>ViewLayer</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Toolbar -->
+            <div class="left-toolbar">
+                <div class="tool-group">
+                    <div class="tool active">
+                        <i data-lucide="mouse-pointer-2" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="target" style="width:20px;height:20px;"></i>
+                    </div>
+                </div>
+                <div class="tool-group">
+                    <div class="tool">
+                        <i data-lucide="move" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="rotate-3d" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="maximize" style="width:20px;height:20px;"></i>
+                    </div>
+                </div>
+                <div class="tool-group">
+                    <div class="tool">
+                        <i data-lucide="pencil" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="ruler" style="width:20px;height:20px;"></i>
+                    </div>
+                </div>
+                <div class="tool-group">
+                    <div class="tool">
+                        <i data-lucide="box" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="cube" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="hexagon" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="container" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="package" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="gem" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="circle-dot" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="pyramid" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="cylinder" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="torus" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="globe" style="width:20px;height:20px;"></i>
+                    </div>
+                    <div class="tool">
+                        <i data-lucide="plus-square" style="width:20px;height:20px;"></i>
+                    </div>
+                </div>
+                <div class="tool-group">
+                    <div class="tool">
+                        <i data-lucide="move-3d" style="width:20px;height:20px;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3D Viewport -->
+            <div class="viewport">
+                <div class="viewport-header">
+                    <div class="viewport-title">
+                        <span class="view-type">User Perspective</span>
+                        <span class="object-name">(1) Plane | Plane</span>
+                    </div>
+                    <div class="viewport-controls">
+                        <div class="axis-indicator">
+                            <div class="axis-x">X</div>
+                            <div class="axis-y">Y</div>
+                            <div class="axis-z">Z</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="viewport-content">
+                    <div class="viewport-tools-right">
+                        <div class="v-tool">
+                            <i data-lucide="zoom-in" style="width:20px;height:20px;"></i>
+                        </div>
+                        <div class="v-tool">
+                            <i data-lucide="hand" style="width:20px;height:20px;"></i>
+                        </div>
+                        <div class="v-tool">
+                            <i data-lucide="video" style="width:20px;height:20px;"></i>
+                        </div>
+                        <div class="v-tool">
+                            <i data-lucide="grid-3x3" style="width:20px;height:20px;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="viewport-toolbar">
+                    <div class="v-toolbar-left">
+                        <div class="mode-selector">
+                            <i data-lucide="menu" style="width:14px;height:14px;"></i>
+                            <span>Edit Mode</span>
+                            <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+                        </div>
+                        <div class="v-btn active">
+                            <i data-lucide="mouse-pointer" style="width:14px;height:14px;"></i>
+                        </div>
+                        <div class="v-btn">
+                            <i data-lucide="move" style="width:14px;height:14px;"></i>
+                        </div>
+                        <div class="v-btn">
+                            <i data-lucide="rotate-cw" style="width:14px;height:14px;"></i>
+                        </div>
+                        <div class="v-btn">
+                            <i data-lucide="maximize-2" style="width:14px;height:14px;"></i>
+                        </div>
+                    </div>
+                    <div class="v-toolbar-center">
+                        <span class="v-label">View</span>
+                        <span class="v-label">Select</span>
+                        <span class="v-label">Add</span>
+                        <span class="v-label">Mesh</span>
+                        <span class="v-label">Vertex</span>
+                        <span class="v-label">Edge</span>
+                        <span class="v-label">Face</span>
+                        <span class="v-label">UV</span>
+                        <div class="v-dropdown">
+                            <i data-lucide="globe" style="width:14px;height:14px;"></i>
+                            <span>Global</span>
+                            <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+                        </div>
+                    </div>
+                    <div class="v-toolbar-right">
+                        <div class="v-btn small">
+                            <i data-lucide="magnet" style="width:14px;height:14px;"></i>
+                        </div>
+                        <div class="v-btn small">
+                            <i data-lucide="proportions" style="width:14px;height:14px;"></i>
+                        </div>
+                        <div class="v-btn small">
+                            <i data-lucide="circle" style="width:14px;height:14px;"></i>
+                        </div>
+                        <div class="v-btn small">
+                            <i data-lucide="eye" style="width:14px;height:14px;"></i>
+                        </div>
+                        <div class="v-btn small">
+                            <i data-lucide="layers" style="width:14px;height:14px;"></i>
+                        </div>
+                        <div class="v-btn small">
+                            <i data-lucide="layout-grid" style="width:14px;height:14px;"></i>
+                        </div>
+                        <div class="v-btn small">
+                            <i data-lucide="settings-2" style="width:14px;height:14px;"></i>
+                        </div>
+                        <div class="v-dropdown options">
+                            <span>Options</span>
+                            <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- N Panel (Sidebar) -->
+            <div class="n-panel">
+                <div class="n-panel-tabs">
+                    <div class="n-tab active">
+                        <i data-lucide="menu" style="width:16px;height:16px;"></i>
+                    </div>
+                    <div class="n-tab">
+                        <i data-lucide="box" style="width:16px;height:16px;"></i>
+                    </div>
+                    <div class="n-tab">
+                        <i data-lucide="image" style="width:16px;height:16px;"></i>
+                    </div>
+                    <div class="n-tab">
+                        <i data-lucide="wand-2" style="width:16px;height:16px;"></i>
+                    </div>
+                </div>
+                <div class="n-panel-content">
+                    <div class="n-section">
+                        <div class="n-header">
+                            <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+                            <span>Item</span>
+                        </div>
+                        <div class="n-body">
+                            <div class="n-row">
+                                <span class="n-label">Location</span>
+                                <div class="n-inputs">
+                                    <input type="text" value="0.0" class="n-input">
+                                    <input type="text" value="0.0" class="n-input">
+                                    <input type="text" value="0.0" class="n-input">
+                                </div>
+                            </div>
+                            <div class="n-row">
+                                <span class="n-label">Rotation</span>
+                                <div class="n-inputs">
+                                    <input type="text" value="0°" class="n-input">
+                                    <input type="text" value="0°" class="n-input">
+                                    <input type="text" value="0°" class="n-input">
+                                </div>
+                            </div>
+                            <div class="n-row">
+                                <span class="n-label">Scale</span>
+                                <div class="n-inputs">
+                                    <input type="text" value="1.0" class="n-input">
+                                    <input type="text" value="1.0" class="n-input">
+                                    <input type="text" value="1.0" class="n-input">
+                                </div>
+                            </div>
+                            <div class="n-row">
+                                <span class="n-label">Dimensions</span>
+                                <div class="n-inputs">
+                                    <input type="text" value="2.0" class="n-input">
+                                    <input type="text" value="2.0" class="n-input">
+                                    <input type="text" value="0.0" class="n-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="n-section">
+                        <div class="n-header">
+                            <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+                            <span>Transform</span>
+                        </div>
+                        <div class="n-body">
+                            <div class="n-row">
+                                <span class="n-label">Mode</span>
+                                <select class="n-select">
+                                    <option>Global</option>
+                                </select>
+                            </div>
+                            <div class="n-row checkbox">
+                                <input type="checkbox" checked>
+                                <span>Location</span>
+                            </div>
+                            <div class="n-row checkbox">
+                                <input type="checkbox" checked>
+                                <span>Rotation</span>
+                            </div>
+                            <div class="n-row checkbox">
+                                <input type="checkbox" checked>
+                                <span>Scale</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="n-section">
+                        <div class="n-header">
+                            <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+                            <span>View</span>
+                        </div>
+                        <div class="n-body">
+                            <div class="n-row checkbox">
+                                <input type="checkbox" checked>
+                                <span>Viewport Gizmos</span>
+                            </div>
+                            <div class="n-row checkbox">
+                                <input type="checkbox" checked>
+                                <span>Viewport Overlays</span>
+                            </div>
+                            <div class="n-row">
+                                <span class="n-label">Local</span>
+                                <select class="n-select">
+                                    <option>User Perspective</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="right-sidebar">
+                <!-- Sub-menu Panel (Tool Settings) -->
+                <div class="panel submenu-panel">
+                    <div class="panel-header">
+                        <div class="panel-tools">
+                            <div class="p-btn">
+                                <i data-lucide="settings" style="width:16px;height:16px;"></i>
+                            </div>
+                        </div>
+                        <span class="panel-title">Active Tool</span>
+                        <div class="panel-actions">
+                            <div class="p-btn">
+                                <i data-lucide="pin" style="width:16px;height:16px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-content">
+                        <div class="submenu-section">
+                            <div class="submenu-header">
+                                <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+                                <span>Box Select</span>
+                            </div>
+                            <div class="submenu-body">
+                                <div class="submenu-row">
+                                    <span class="submenu-label">Selection</span>
+                                    <div class="submenu-buttons">
+                                        <button class="submenu-btn active">Set</button>
+                                        <button class="submenu-btn">Add</button>
+                                        <button class="submenu-btn">Sub</button>
+                                    </div>
+                                </div>
+                                <div class="submenu-row">
+                                    <span class="submenu-label">Drag</span>
+                                    <select class="submenu-select">
+                                        <option>Box</option>
+                                    </select>
+                                </div>
+                                <div class="submenu-row checkbox">
+                                    <input type="checkbox">
+                                    <span>Wait for Input</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="submenu-section">
+                            <div class="submenu-header">
+                                <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+                                <span>Cursor</span>
+                            </div>
+                            <div class="submenu-body">
+                                <div class="submenu-row">
+                                    <span class="submenu-label">Location</span>
+                                    <div class="n-inputs">
+                                        <input type="text" value="0.0" class="n-input">
+                                        <input type="text" value="0.0" class="n-input">
+                                        <input type="text" value="0.0" class="n-input">
+                                    </div>
+                                </div>
+                                <div class="submenu-row">
+                                    <span class="submenu-label">Rotation</span>
+                                    <div class="n-inputs">
+                                        <input type="text" value="0°" class="n-input">
+                                        <input type="text" value="0°" class="n-input">
+                                        <input type="text" value="0°" class="n-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outliner Panel -->
+                <div class="panel outliner">
+                    <div class="panel-header">
+                        <div class="panel-tools">
+                            <div class="p-btn">
+                                <i data-lucide="list" style="width:16px;height:16px;"></i>
+                            </div>
+                            <div class="p-btn">
+                                <i data-lucide="image" style="width:16px;height:16px;"></i>
+                            </div>
+                        </div>
+                        <div class="panel-search">
+                            <i data-lucide="search" style="width:14px;height:14px;"></i>
+                            <span>Search</span>
+                        </div>
+                        <div class="panel-actions">
+                            <div class="p-btn">
+                                <i data-lucide="filter" style="width:16px;height:16px;"></i>
+                            </div>
+                            <div class="p-btn">
+                                <i data-lucide="plus" style="width:16px;height:16px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-content">
+                        <div class="tree-item">
+                            <i data-lucide="folder" style="width:14px;height:14px;"></i>
+                            <span>Scene Collection</span>
+                        </div>
+                        <div class="tree-item nested">
+                            <i data-lucide="chevron-down" style="width:14px;height:14px;"></i>
+                            <i data-lucide="folder-open" style="width:14px;height:14px;"></i>
+                            <span>Collection</span>
+                        </div>
+                        <div class="tree-item nested-2">
+                            <i data-lucide="chevron-right" style="width:14px;height:14px;"></i>
+                            <i data-lucide="video" style="width:14px;height:14px;color:#e8a87c;"></i>
+                            <span>Camera</span>
+                            <div class="tree-icons">
+                                <i data-lucide="eye" style="width:14px;height:14px;"></i>
+                                <i data-lucide="monitor" style="width:14px;height:14px;"></i>
+                            </div>
+                        </div>
+                        <div class="tree-item nested-2 selected">
+                            <i data-lucide="chevron-right" style="width:14px;height:14px;"></i>
+                            <i data-lucide="triangle" style="width:14px;height:14px;color:#e8a87c;"></i>
+                            <span>Plane</span>
+                            <div class="tree-icons">
+                                <i data-lucide="eye" style="width:14px;height:14px;"></i>
+                                <i data-lucide="monitor" style="width:14px;height:14px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Properties Panel -->
+                <div class="panel properties">
+                    <div class="panel-header">
+                        <div class="panel-tools">
+                            <div class="p-btn">
+                                <i data-lucide="menu" style="width:16px;height:16px;"></i>
+                            </div>
+                        </div>
+                        <div class="panel-search">
+                            <i data-lucide="search" style="width:14px;height:14px;"></i>
+                            <span>Search</span>
+                        </div>
+                        <div class="panel-actions">
+                            <div class="p-btn">
+                                <i data-lucide="pin" style="width:16px;height:16px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-tabs">
+                        <div class="tab-icon active">
+                            <i data-lucide="wrench" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div class="tab-icon">
+                            <i data-lucide="box" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div class="tab-icon">
+                            <i data-lucide="monitor" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div class="tab-icon">
+                            <i data-lucide="image" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div class="tab-icon">
+                            <i data-lucide="droplet" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div class="tab-icon">
+                            <i data-lucide="target" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div class="tab-icon">
+                            <i data-lucide="wand-2" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div class="tab-icon">
+                            <i data-lucide="share-2" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div class="tab-icon">
+                            <i data-lucide="zap" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div class="tab-icon">
+                            <i data-lucide="filter" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div class="tab-icon">
+                            <i data-lucide="flask-conical" style="width:18px;height:18px;"></i>
+                        </div>
+                        <div class="tab-icon">
+                            <i data-lucide="grid-3x3" style="width:18px;height:18px;"></i>
+                        </div>
+                    </div>
+                    <div class="panel-content">
+                        <div class="prop-header">
+                            <i data-lucide="square" style="width:16px;height:16px;"></i>
+                            <span>Plane</span>
+                        </div>
+                        <div class="modifier-section">
+                            <button class="add-modifier">
+                                <i data-lucide="plus" style="width:14px;height:14px;"></i>
+                                <span>Add Modifier</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-left">
+                <div class="status-item">
+                    <i data-lucide="axis-3d" style="width:14px;height:14px;"></i>
+                    <span>X</span>
+                </div>
+                <div class="status-item">
+                    <span>Y</span>
+                </div>
+                <div class="status-item">
+                    <span>Z</span>
+                </div>
+                <div class="status-separator"></div>
+                <div class="status-item">
+                    <i data-lucide="mouse-pointer-click" style="width:14px;height:14px;"></i>
+                </div>
+            </div>
+            <div class="status-center">
+                <span class="stat-label">Plane</span>
+                <span class="stat-sep">|</span>
+                <span class="stat-label">Verts:4/4</span>
+                <span class="stat-sep">|</span>
+                <span class="stat-label">Edges:4/4</span>
+                <span class="stat-sep">|</span>
+                <span class="stat-label">Faces:1/1</span>
+                <span class="stat-sep">|</span>
+                <span class="stat-label">Tris:2</span>
+                <span class="stat-sep">|</span>
+                <span class="stat-label">Objects:1/2</span>
+                <span class="stat-sep">|</span>
+                <span class="stat-label">Duration: 00:10+10</span>
+                <span class="stat-sep">|</span>
+                <span class="stat-label">(Frame 1/250)</span>
+                <span class="stat-sep">|</span>
+                <span class="stat-label">Memory: 45.2 MiB</span>
+                <span class="stat-sep">|</span>
+                <span class="stat-label">VRAM: 2.4/8.0 GiB</span>
+            </div>
+            <div class="status-right">
+                <i data-lucide="settings" style="width:14px;height:14px;"></i>
+                <span class="version">4.5.3</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+<!-- add this after the existing lucide.createIcons(); inline script -->
+<script src="script.js"></script>
+</body>
+</html>
